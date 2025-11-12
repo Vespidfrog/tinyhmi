@@ -1,0 +1,51 @@
+---
+config:
+  theme: default
+title: tinyihm
+---
+classDiagram
+direction LR
+    class Analog {
+	    +const int* m_value
+	    +int m_lastValue
+	    +int m_minimum
+	    +int m_maximum
+    }
+    class Digital {
+	    +const bool* m_state
+	    +bool m_lastState
+    }
+    class Knob {
+	    +void update() override
+    }
+    class Vslider {
+	    +void update() override
+    }
+    class Hslider {
+	    +void update() override
+    }
+    class Button {
+	    +void update() override
+    }
+    class Play {
+	    +void update() override
+    }
+    class Widget {
+	    +int x, y, w, h
+	    +bool m_visible
+	    +int color
+	    +virtual void update()
+	    +virtual void clearFrame()
+    }
+
+	note for Widget "Classe Abstrata de um Widget"
+	note for Analog "Classe Abstrata de um Widget com mais de 2 valores possiveis"
+	note for Digital "Classe Abstrata de um Widget com somente 2 valores / estados possíveis"
+
+    Widget <|-- Analog
+    Widget <|-- Digital
+    Analog <|-- Knob
+    Analog <|-- Vslider
+    Analog <|-- Hslider
+    Digital <|-- Button
+    Digital <|-- Play
