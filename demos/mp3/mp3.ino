@@ -1,7 +1,7 @@
 // Demonstração 1 - MP3 Player
 
 #include <Adafruit_SSD1306.h>
-#include "tinyihm.h"
+#include "tinyihm1file.h"
 
 int comprimento = 100; // comprimento da música
 int tempo = 0;         // tempo atual do playhead
