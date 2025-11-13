@@ -100,7 +100,7 @@ public:
 		// calcula posição do centro do widget
 		int x0 = m_x + m_w / 2;
 		int y0 = m_y + m_h / 2;
-		int r = min(m_x, m_y) / 2 - 1;
+		int r = min(m_w, m_h) / 2 - 1;
 
 		// desenha a coroa do knob
 		m_display->drawCircle(x0, y0, r, WHITE);
