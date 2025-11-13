@@ -46,11 +46,3 @@ public:
 	// precisamos do polimorfismo, com uma função virtual
 	virtual void update() = 0;
 };
-
-		m_maximum(maximum),
-		// último valor diferente do valor atual p/ forçar desenho do 1º frame
-		m_lastValue(minimum - 1) {}
-	
-	// ainda não vamos fazer override do destrutor nem do update!!
-};
-
