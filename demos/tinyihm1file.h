@@ -74,7 +74,7 @@ public:
 	Button(Adafruit_GFX* display, int x, int y, int w, int h, bool* state) :
 		Digital(display, x, y, w, h, state) {}
 
-	~Button() override = default;
+	~Button() = default;
 
 	void update() override {
 		// não redesenha se o estado não mudou
@@ -100,7 +100,7 @@ public:
 	Play(Adafruit_GFX* display, int x, int y, int w, int h, bool* state) :
 		Digital(display, x, y, w, h, state) {}
 	
-	~Play() override = default;
+	~Play() = default;
 	
 	void update() override {
 		// não desenha novo frame se não precisa
@@ -159,7 +159,7 @@ public:
 	Vslider(Adafruit_GFX* display, int x, int y, int w, int h, int* value, int minimum, int maximum) :
 		Analog(display, x, y, w, h, value, minimum, maximum) {}
 	
-	~Vslider() override = default;
+	~Vslider() = default;
 	
 	void update() override {
 		if (*m_value == m_lastValue || !m_visible) return;
@@ -190,7 +190,7 @@ public:
 	Hslider(Adafruit_GFX* display, int x, int y, int w, int h, int* value, int minimum, int maximum) :
 		Analog(display, x, y, w, h, value, minimum, maximum) {}
 	
-	~Hslider() override = default;
+	~Hslider() = default;
 	
 	void update() override {
 		if (*m_value == m_lastValue || !m_visible) return;
@@ -221,7 +221,7 @@ public:
 	Knob(Adafruit_GFX* display, int x, int y, int w, int h, int* value, int minimum, int maximum) :
 		Analog(display, x, y, w, h, value, minimum, maximum) {}
 	
-	~Knob() override = default;
+	~Knob() = default;
 	
 	void update() override {
 		// não desenha novo frame se não precisa
